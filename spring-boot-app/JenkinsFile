@@ -1,10 +1,11 @@
 pipeline {
   agent {
     docker {
-      image 'abhishekf5/maven-abhishek-docker-agent:v1'
-      args '-v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
+      image 'harsh1805/jenkins-maven-java17-docker-agent:1.0'
+      args '-v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
+
 
    options {
     skipDefaultCheckout(true)
