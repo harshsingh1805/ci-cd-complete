@@ -12,9 +12,10 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo passed'
-        deleteDir()
         
+        deleteDir()
+        checkout scm
+        sh 'echo passed'
       }
     }
     stage('Build and Test') {
