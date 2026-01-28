@@ -36,6 +36,7 @@ pipeline {
       }
     }
     stage('Build and Push Docker Image') {
+      agent any 
       environment {
         DOCKER_IMAGE = "harsh1805/ultimate-cicd:${BUILD_NUMBER}"
         
